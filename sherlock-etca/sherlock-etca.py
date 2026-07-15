@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Sherlock-ETCA v1.0 - Herramienta de OSINT para redes sociales.
-Creado por ETCA (Tobias Calderara) - https://github.com/thacker19
+Creado por ETCA (Edison Tobias Calderara Ayala) - https://github.com/thacker19
 Basado en el concepto de Sherlock, pero optimizado y con estilo ETCA.
 """
 import requests
