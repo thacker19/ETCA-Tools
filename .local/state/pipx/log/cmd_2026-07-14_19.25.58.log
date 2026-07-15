@@ -1,9 +1,0 @@
-   221.8ms (setup:1340): 2026-07-14 19:25:58
-   221.9ms (setup:1341): /usr/bin/pipx ensurepath
-   222.0ms (setup:1342): pipx version is 1.14.0
-   222.0ms (setup:1343): Default python interpreter is '/usr/bin/python3.13'
-   291.7ms (_validate_backend_available:309): Backend resolved to pip (source: auto-pip)
-   293.1ms (ensure_pipx_paths:135): ⚠️  All pipx binary directories have been appended to PATH. If you are sure you want to proceed, try again with the
-'--force' flag.
-
-   293.3ms (cli:1442): pipx finished.

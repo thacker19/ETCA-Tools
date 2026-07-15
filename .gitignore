@@ -1,0 +1,37 @@
+# Archivos de configuración de shell
+.bash_history
+.bash_logout
+.bashrc
+.bashrc.original
+.profile
+.zsh*
+.zprofile
+.zsh_history
+.zsh_plugins
+.zshrc*
+.zcompdump*
+
+# Directorios de configuración personal
+.cache/
+.config/
+.java/
+.local/
+.ssh/
+.zsh/
+
+# Archivos temporales y de sistema
+.sudo_as_admin_successful
+.wget-hsts
+gh.deb
+
+# Archivos de editor
+*.swp
+*.swo
+*~
+
+# Archivos de Python
+__pycache__/
+*.pyc
+
+# Archivos de logs
+*.log
