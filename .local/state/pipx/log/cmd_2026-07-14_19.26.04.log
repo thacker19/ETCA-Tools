@@ -1,0 +1,68 @@
+   180.4ms (setup:1340): 2026-07-14 19:26:04
+   180.6ms (setup:1341): /usr/bin/pipx install .
+   180.6ms (setup:1342): pipx version is 1.14.0
+   180.7ms (setup:1343): Default python interpreter is '/usr/bin/python3.13'
+   246.4ms (_validate_backend_available:309): Backend resolved to pip (source: auto-pip)
+   247.1ms (_parsed_package_to_package_or_url:138): cleaned package spec: /home/tobias
+   248.6ms (create_venv:250): Creating virtual environment
+   249.4ms (run_subprocess:182): running /usr/bin/python3.13 -m venv --without-pip /tmp/tmppfj850yp
+   320.6ms (run_subprocess:207): stdout:
+   320.7ms (run_subprocess:209): stderr:
+   320.7ms (run_subprocess:210): returncode: 0
+   321.5ms (run_subprocess:182): running <checking pip's availability>
+   343.3ms (run_subprocess:207): stdout: ModuleSpec(name='pip', loader=<_frozen_importlib_external.SourceFileLoader object at 0x71479666f350>, origin='/home/tobias/.local/share/pipx/shared/lib/python3.13/site-packages/pip/__init__.py', submodule_search_locations=['/home/tobias/.local/share/pipx/shared/lib/python3.13/site-packages/pip'])
+   343.4ms (run_subprocess:210): returncode: 0
+   343.7ms (run_subprocess:182): running /tmp/tmppfj850yp/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+   367.9ms (run_subprocess:207): stdout: /tmp/tmppfj850yp/lib/python3.13/site-packages
+   368.0ms (run_subprocess:210): returncode: 0
+   368.6ms (run_subprocess:182): running /home/tobias/.local/share/pipx/shared/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+   394.0ms (run_subprocess:207): stdout: /home/tobias/.local/share/pipx/shared/lib/python3.13/site-packages
+   394.2ms (run_subprocess:210): returncode: 0
+   394.7ms (run_subprocess:182): running /tmp/tmppfj850yp/bin/python --version
+   397.5ms (run_subprocess:207): stdout: Python 3.13.12
+   397.6ms (run_subprocess:209): stderr:
+   397.6ms (run_subprocess:210): returncode: 0
+   398.2ms (run_subprocess:182): running /tmp/tmppfj850yp/bin/python -m pip list --format=json
+   805.0ms (run_subprocess:207): stdout: [{"name": "pip", "version": "26.1.2"}]
+   805.2ms (run_subprocess:209): stderr:
+   805.2ms (run_subprocess:210): returncode: 0
+   805.4ms (run_subprocess:182): running /tmp/tmppfj850yp/bin/python -m pip --no-input install --no-dependencies /home/tobias
+  1436.0ms (run_subprocess:207): stdout:
+  1436.2ms (run_subprocess:209): stderr: ERROR: Directory '/home/tobias' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
+  1436.2ms (run_subprocess:210): returncode: 1
+  1436.4ms (subprocess_post_check:224): '/tmp/tmppfj850yp/bin/python -m pip --no-input install --no-dependencies /home/tobias' failed
+  1438.1ms (cli:1434): PipxError: Cannot determine package name from spec '/home/tobias'. Check package spec for errors.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 1431, in cli
+    return run_pipx_command(parsed_pipx_args)
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 298, in run_pipx_command
+    return args.func(args, ctx)
+           ~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 462, in _cmd_install
+    return commands.install(
+           ~~~~~~~~~~~~~~~~^
+        None,
+        ^^^^^
+    ...<15 lines>...
+        env_backend=ctx.env_backend,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3/dist-packages/pipx/commands/install.py", line 52, in install
+    package_name_from_spec(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        package_spec,
+        ^^^^^^^^^^^^^
+    ...<4 lines>...
+        env_backend=env_backend,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3/dist-packages/pipx/commands/common.py", line 419, in package_name_from_spec
+    package_name = venv.install_package_no_deps(package_or_url=package_spec, pip_args=pip_args)
+  File "/usr/lib/python3/dist-packages/pipx/venv.py", line 393, in install_package_no_deps
+    raise PipxError(
+    ...<4 lines>...
+    )
+pipx.util.PipxError: Cannot determine package name from spec '/home/tobias'. Check package spec for errors.
+  1443.9ms (cli:1442): pipx finished.

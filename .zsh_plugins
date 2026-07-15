@@ -1,0 +1,8 @@
+# Autosugerencias (sugerencias en gris)
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Colores en comandos (verde = válido, rojo = inválido)
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# (Opcional) Ajustar el color de las sugerencias a gris claro
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
